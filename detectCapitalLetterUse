@@ -1,0 +1,17 @@
+def detectCapitalUse(word: str) -> bool:
+    if word.isupper() == True:
+        print('In')
+        return True
+    elif word.islower == True:
+        return True
+    else:
+        wordlist = [char for char in word]
+        wordlist = wordlist[1:]
+        for idx in wordlist:
+            if idx.isupper() == True or idx == ' ':
+                print(idx)
+                return False
+        return True
+		
+ans = detectCapitalUse('USA')
+ans
