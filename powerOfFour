@@ -1,0 +1,6 @@
+Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+Without loops and recursion
+
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        return ((num & (num - 1)) == 0) and (num % 3 == 1)
