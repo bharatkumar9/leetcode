@@ -1,0 +1,16 @@
+#Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+#Note: For the purpose of this problem, we define empty string as valid palindrome.
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        wordlist = [char for char in s]
+        list1 = []
+        for idx in wordlist:
+            if idx.isalnum() == True:
+               list1.append(idx.lower())
+        wordlist = list1[::-1]
+        if list1 == wordlist:
+            return True
+        else:
+            return False
+        
